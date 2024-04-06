@@ -245,12 +245,14 @@ input[type="submit"] {
 
 .footer-container {
 	background-color: #1C6474;
-	color: #A8D5D8;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 50px;
 	padding: 10px;
+	span {
+		color: white;
+	}
 }
 
 @media all and (max-width: 1180px) {

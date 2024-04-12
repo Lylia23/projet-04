@@ -120,42 +120,81 @@
       $(`#${lightboxId}`).modal("toggle");
     },
     prevImage() {
-      const activeImage = $(".lightboxImage");
-      const activeTag = $(".tags-bar span.active-tag").data("images-toggle");
-      const imagesCollection = [];
-    
-      $(".item-column").each(function() {
-        const img = $(this).find("img");
-        if (activeTag === "all" || img.data("gallery-tag") === activeTag) {
-          imagesCollection.push(img);
+      let activeImage = null;
+      $("img.gallery-item").each(function() {
+        if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
+          activeImage = $(this);
         }
       });
-    
-      const currentIndex = imagesCollection.findIndex(img => img.attr("src") === activeImage.attr("src"));
-      const prevIndex = (currentIndex - 1 + imagesCollection.length) % imagesCollection.length;
-      const prevImage = imagesCollection[prevIndex];
-      
-      activeImage.attr("src", prevImage.attr("src"));
+      let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
+      let imagesCollection = [];
+      if (activeTag === "all") {
+        $(".item-column").each(function() {
+          if ($(this).children("img").length) {
+            imagesCollection.push($(this).children("img"));
+          }
+        });
+      } else {
+        $(".item-column").each(function() {
+          if (
+            $(this)
+              .children("img")
+              .data("gallery-tag") === activeTag
+          ) {
+            imagesCollection.push($(this).children("img"));
+          }
+        });
+      }
+      let index = 0,
+        next = null;
+
+      $(imagesCollection).each(function(i) {
+        if ($(activeImage).attr("src") === $(this).attr("src")) {
+          index = i ;
+        }
+      });
+      next =
+        imagesCollection[index - 1] ||
+        imagesCollection[imagesCollection.length - 1];
+      $(".lightboxImage").attr("src", $(next).attr("src"));
     },
     nextImage() {
-      const activeImage = $(".lightboxImage");
-      const activeTag = $(".tags-bar span.active-tag").data("images-toggle");
-      const imagesCollection = [];
-    
-      $(".item-column").each(function() {
-        const img = $(this).find("img");
-        if (activeTag === "all" || img.data("gallery-tag") === activeTag) {
-          imagesCollection.push(img);
+      let activeImage = null;
+      $("img.gallery-item").each(function() {
+        if ($(this).attr("src") === $(".lightboxImage").attr("src")) {
+          activeImage = $(this);
         }
       });
-    
-      const currentIndex = imagesCollection.findIndex(img => img.attr("src") === activeImage.attr("src"));
-      const nextIndex = (currentIndex + 1) % imagesCollection.length;
-      const nextImage = imagesCollection[nextIndex];
-      
-      activeImage.attr("src", nextImage.attr("src"));
-    }
-    ,
+      let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
+      let imagesCollection = [];
+      if (activeTag === "all") {
+        $(".item-column").each(function() {
+          if ($(this).children("img").length) {
+            imagesCollection.push($(this).children("img"));
+          }
+        });
+      } else {
+        $(".item-column").each(function() {
+          if (
+            $(this)
+              .children("img")
+              .data("gallery-tag") === activeTag
+          ) {
+            imagesCollection.push($(this).children("img"));
+          }
+        });
+      }
+      let index = 0,
+        next = null;
+
+      $(imagesCollection).each(function(i) {
+        if ($(activeImage).attr("src") === $(this).attr("src")) {
+          index = i;
+        }
+      });
+      next = imagesCollection[index + 1] || imagesCollection[0];
+      $(".lightboxImage").attr("src", $(next).attr("src"));
+    },
     createLightBox(gallery, lightboxId, navigation) {
       gallery.append(`<div class="modal fade" id="${
         lightboxId ? lightboxId : "galleryLightbox"
@@ -181,10 +220,10 @@
     },
     showItemTags(gallery, position, tags) {
       var tagItems =
-        '<li class="nav-item"><span class="nav-link active active-tag"  data-images-toggle="all">Tous</span></li>';
+        '<li class="nav-item"><span class="nav-link active active-tag cursor-pointer"  data-images-toggle="all">Tous</span></li>';
       $.each(tags, function(index, value) {
         tagItems += `<li class="nav-item active">
-                <span class="nav-link"  data-images-toggle="${value}">${value}</span></li>`;
+                <span class="nav-link cursor-pointer"  data-images-toggle="${value}">${value}</span></li>`;
       });
       var tagsRow = `<ul class="my-4 tags-bar nav nav-pills">${tagItems}</ul>`;
 

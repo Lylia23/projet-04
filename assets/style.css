@@ -54,6 +54,11 @@ body {
 	position: relative;
 }
 
+.carousel-item {
+	position: relative;
+	top: 20px;
+}
+
 .picture.left::before {
 	content: ' ';
 	background-color: #E5975F;

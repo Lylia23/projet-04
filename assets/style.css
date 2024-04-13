@@ -1,3 +1,7 @@
+:root {
+	--back-color: #1C6474
+}
+
 body {
 	max-width: 1920px;
 	margin: auto;
@@ -50,6 +54,11 @@ body {
 	position: relative;
 }
 
+.carousel-item {
+	position: relative;
+	top: 20px;
+}
+
 .picture.left::before {
 	content: ' ';
 	background-color: #E5975F;
@@ -80,19 +89,18 @@ body {
 	font-size: 30px;
 }
 .about-me__introduction {
+	font-size: 1em;
+	line-height: 1.2;
 	font-family: 'Spectral';
 	font-weight: 800;
 	font-style: italic;
 	width: 60%;
 }
-#about-me p {
+.about-me__suite {
 	width: 80%;
 	font-size: 14px;
 }
 
-#gallery {
-	/*	min-height: 100vh; */
-}
 .title{
 	text-align: center;
 	padding-block: 2em;
@@ -101,9 +109,9 @@ body {
 	justify-content: center;
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-	color: #fff;
-	background-color: #BEB45A;
-	border-radius:0 ;
+	color: #ffffff;
+    background-color: var(--back-color);
+    border-radius: 0;
 }
 .nav-pills .nav-link {
 	color: #000
@@ -244,6 +252,18 @@ input[type="submit"] {
 	padding: .5em 1em
 }
 
+.footer-container {
+	background-color: var(--back-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+	padding: 10px;
+	span {
+		color: white;
+	}
+}
+
 @media all and (max-width: 1180px) {
 	.picture {
 		flex : 2;
@@ -317,6 +337,10 @@ input[type="submit"] {
 		right: 0;
 		z-index: -1;
 	}
+}
+
+.cursor-pointer {
+	cursor: pointer;
 }
 
 @media all and (max-width: 650px) {

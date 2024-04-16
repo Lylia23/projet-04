@@ -4,46 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="copyright" content="© Nina carducci" />
-    <meta name="author" content="Nina carducci" />
-    <meta name="description"
-        content="Site web de Nina Carducci, photographe capturant des moments uniques avec passion et créativité." />
-    <meta name="keywords"
-        content="photographe, photographie, moments uniques, passion, créativité, émotions, bonheur, tendresse, lumière, Richard Avedon, portrait, expression, vie, regard, nostalgie" />
+    <meta name="copyright" content="© Nina Carducci">
+    <meta name="author" content="Nina Carducci">
+    <meta name="description" content="Site web de Nina Carducci, photographe capturant des moments uniques avec passion et créativité.">
+    <meta name="keywords" content="photographe, photographie, moments uniques, passion, créativité, émotions, bonheur, tendresse, lumière, Richard Avedon, portrait, expression, vie, regard, nostalgie">
 
     <!-- Robots -->
-    <meta name="robots" content="index,follow" />
+    <meta name="robots" content="index,follow">
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Nina Carducci - Photographe" />
-    <meta property="og:description"
-        content="Site web de Nina Carducci, photographe capturant des moments uniques avec passion et créativité." />
-    <meta property="og:url" content="https://schema.org" />
-    <meta property="og:image" content="https://schema.org/assets/images/nina.jpg" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nina Carducci - Photographe">
+    <meta property="og:description" content="Site web de Nina Carducci, photographe capturant des moments uniques avec passion et créativité.">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:image" content="https://example.com/assets/images/nina.jpg">
 
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Nina Carducci - Photographe" />
-    <meta name="twitter:description"
-        content="Site web de Nina Carducci, photographe capturant des moments uniques avec passion et créativité." />
-    <meta name="twitter:image" content="https://schema.org/assets/images/nina.jpg" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nina Carducci - Photographe">
+    <meta name="twitter:description" content="Site web de Nina Carducci, photographe capturant des moments uniques avec passion et créativité.">
+    <meta name="twitter:image" content="https://example.com/assets/images/nina.jpg">
 
-    <!-- url de l'image -->
-    <title> Nina Cadducci, photographe </title>
+    <!-- Page Title -->
+    <title>Nina Carducci - Photographe</title>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/style.css">
+
+    <!-- Preconnect for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
-        rel="stylesheet">
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="./assets/bootstrap/bootstrap.bundle.min.js" async></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="./assets/maugallery.js" defer></script>
     <script src="./assets/scripts.js" defer></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Photograph",
+          "name": "Nina Carducci",
+          "url": "https://example.com",
+          "image": "https://example.com/assets/images/nina.jpg",
+          "description": "Site web de Nina Carducci, photographe capturant des moments uniques avec passion et créativité.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "68 avenue Alsace-Lorraine",
+            "addressLocality": "Bordeaux",
+            "postalCode": "33200",
+            "addressCountry": "France"
+          },
+          "telephone": "0556677889",
+          "openingHours": "Mo-Fr 10:00-19:00"
+        }
+    </script>
 </head>
+
 <body>
     <header class="top-header">
         <h1 class="name">Nina Carducci</h1>
@@ -237,24 +259,6 @@
         <span>Adresse: 68 avenue Alsace-Lorraine, 33200 Bordeaux.</span>
         <span>Contact: 0556 677 889 du lundi au vendredi de 10h à 19h</span>
         <span>© Copyright Nina carducci</span>
-        <script type="application/ld+json">
-            {
-              "@context": "https://schema.org",
-              "@type": "ProfessionnalService",
-              "name": "Nina Carducci",
-              "image": "https://schema.org/assets/images/nina.jpg",
-              "description": "Site web de Nina Carducci, photographe capturant des moments uniques avec passion et créativité.",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "68 avenue Alsace-Lorraine",
-                "addressLocality": "Bordeaux",
-                "postalCode": "33200",
-                "addressCountry": "France"
-              },
-              "telephone": "0556677889",
-              "openingHours": "du lundi au vendredi de 10h à 19h"
-            }
-        </script>
     </footer>
 </body>
 </html>

@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="copyright" content="© Nina Carducci">
     <meta name="author" content="Nina Carducci">
-    <meta name="description" content="Site web de Nina Carducci, photographe capturant des moments uniques avec passion et créativité.">
-    <meta name="keywords" content="photographe, photographie, moments uniques, passion, créativité, émotions, bonheur, tendresse, lumière, Richard Avedon, portrait, expression, vie, regard, nostalgie">
+    <meta name="description"
+        content="Site web de Nina Carducci, photographe capturant des moments uniques avec passion et créativité.">
+    <meta name="keywords"
+        content="photographe, photographie, moments uniques, passion, créativité, émotions, bonheur, tendresse, lumière, Richard Avedon, portrait, expression, vie, regard, nostalgie">
 
     <!-- Robots -->
     <meta name="robots" content="index,follow">
@@ -15,14 +17,16 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Nina Carducci - Photographe">
-    <meta property="og:description" content="Site web de Nina Carducci, photographe capturant des moments uniques avec passion et créativité.">
+    <meta property="og:description"
+        content="Site web de Nina Carducci, photographe capturant des moments uniques avec passion et créativité.">
     <meta property="og:url" content="https://example.com">
     <meta property="og:image" content="https://example.com/assets/images/nina.jpg">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Nina Carducci - Photographe">
-    <meta name="twitter:description" content="Site web de Nina Carducci, photographe capturant des moments uniques avec passion et créativité.">
+    <meta name="twitter:description"
+        content="Site web de Nina Carducci, photographe capturant des moments uniques avec passion et créativité.">
     <meta name="twitter:image" content="https://example.com/assets/images/nina.jpg">
 
     <!-- Page Title -->
@@ -36,34 +40,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Link to Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
+        rel="stylesheet">
 
     <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="./assets/bootstrap/bootstrap.bundle.min.js" async></script>
     <script src="./assets/maugallery.js" defer></script>
     <script src="./assets/scripts.js" defer></script>
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Photograph",
-          "name": "Nina Carducci",
-          "url": "https://example.com",
-          "image": "https://example.com/assets/images/nina.jpg",
-          "description": "Site web de Nina Carducci, photographe capturant des moments uniques avec passion et créativité.",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "68 avenue Alsace-Lorraine",
-            "addressLocality": "Bordeaux",
-            "postalCode": "33200",
-            "addressCountry": "France"
-          },
-          "telephone": "0556677889",
-          "openingHours": "Mo-Fr 10:00-19:00"
-        }
-    </script>
 </head>
 
 <body>
@@ -260,5 +246,43 @@
         <span>Contact: 0556 677 889 du lundi au vendredi de 10h à 19h</span>
         <span>© Copyright Nina carducci</span>
     </footer>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+            {
+                "@context": "http://schema.org",
+                "@type": ["LocalBusiness", "Service"],
+                "name": "Nina Carducci",
+                "description": "Nina Carducci, photographe professionnelle à Bordeaux",
+                "image": "https://lylia23.github.io/projet-04/assets/images/nina.jpg",
+                "url": "https://lylia23.github.io/projet-04/",
+                "telephone": "0556677889",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "68 avenue Alsace-Lorraine",
+                    "addressLocality": "Bordeaux",
+                    "postalCode": "33200",
+                    "addressCountry": "FR"
+                    },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "44.8466732",
+                    "longitude": "-0.6065805"
+                },
+                "openingHoursSpecification": {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                        "lundi",
+                        "mardi",
+                        "mercredi",
+                        "jeudi",
+                        "vendredi"
+                    ],
+                    "opens": "10:00",
+                    "closes": "19:00"
+                },
+                "priceRange" : "50€ - 400€"
+            }
+        </script>
 </body>
+
 </html>
